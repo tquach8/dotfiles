@@ -15,3 +15,6 @@ map('n', '<leader>hd', ':vertical resize +5<CR>', options)
 map('n', '<leader>va', ':resize -5<CR>', options)
 map('n', '<leader>vd', ':resize +5<CR>', options)
 map('n', '<leader><Esc>', ':nohlsearch<CR>', options)
+
+map('n', '<C-p>', ':GFiles<CR>', options)
+map('n', '<C-b>', ':NERDTree<CR>', options)

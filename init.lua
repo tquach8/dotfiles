@@ -1,7 +1,7 @@
 require "mappings"
 require "settings"
-
-vim.cmd 'colorscheme tokyodark'
+require "plugin.treesitter"
+require "plugin.lsp"
 
 local function clone_paq()
   local path = vim.fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
@@ -25,6 +25,9 @@ require 'paq' {
   "neovim/nvim-lspconfig";
   "hrsh7th/nvim-cmp";
   "hrsh7th/cmp-nvim-lsp";
+  "junegunn/fzf";
+  "junegunn/fzf.vim";
+  "preservim/nerdtree";
 
   "tiagovla/tokyodark.nvim";
 
@@ -34,9 +37,4 @@ require 'paq' {
   "lukas-reineke/indent-blankline.nvim";
 }
 
-require'plugins.treesitter'
-require'plugins.lsp'
-require'plugins.indent-blankline'
-
-vim.g.indent_blankline_use_treesitter = "true"
-
+vim.cmd "colorscheme tokyodark"
