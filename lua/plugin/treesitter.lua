@@ -3,5 +3,9 @@ require'nvim-treesitter.configs'.setup {
 
   highlight = {
     enable = true,
+    -- custom_captures = {
+    --   ["module"] = "Identifier",
+    -- },
+    additional_vim_regex_highlighting = true,
   }
 }

@@ -17,4 +17,6 @@ map('n', '<leader>vd', ':resize +5<CR>', options)
 map('n', '<leader><Esc>', ':nohlsearch<CR>', options)
 
 map('n', '<C-p>', ':GFiles<CR>', options)
-map('n', '<C-b>', ':NERDTree<CR>', options)
+map('n', '<C-f>', ':Rg<CR>', options)
+map('n', '<C-o>', ':Buffers<CR>', options)
+map('n', '<C-b>', ':NERDTreeToggle<CR>', options)

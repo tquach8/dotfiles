@@ -1,5 +1,5 @@
-vim.cmd [[highlight IndentBlanklineIndent1 guifg=#1f1f1f gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guifg=#1f1f1f gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#363434 gui=nocombine]]
+vim.cmd [[highlight IndentBlanklineIndent2 guifg=#363434 gui=nocombine]]
 vim.cmd [[highlight IndentBlanklineContextChar guifg=#E06C75 gui=nocombine]]
 
 vim.opt.list = true
