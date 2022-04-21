@@ -2,6 +2,7 @@ require "mappings"
 require "settings"
 require "plugin.treesitter"
 require "plugin.lsp"
+require "plugin.toggleterm"
 
 local function clone_paq()
   local path = vim.fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
@@ -28,6 +29,8 @@ require 'paq' {
   "hrsh7th/cmp-nvim-lsp";
   "L3MON4D3/LuaSnip";
   "saadparwaiz1/cmp_luasnip";
+  "vim-test/vim-test";
+  "akinsho/toggleterm.nvim";
 
   "junegunn/fzf";
   "junegunn/fzf.vim";
