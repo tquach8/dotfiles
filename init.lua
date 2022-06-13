@@ -47,7 +47,7 @@ require 'paq' {
   "vim-airline/vim-airline-themes";
 
   "preservim/vimux";
-  "pgr0ss/vimux-ruby-test"
+  "pgr0ss/vimux-ruby-test";
 }
 vim.g.vscode_style = "dark"
 vim.g.vscode_italic_comment = 1
