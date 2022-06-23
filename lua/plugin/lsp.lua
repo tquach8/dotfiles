@@ -4,7 +4,6 @@ local has_words_before = function()
   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local luasnip = require("luasnip")
 local cmp = require("cmp")
 
 local on_attach = function(client, bufnr)
@@ -16,13 +15,12 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Solargraph Installation
 -- Run `gem install --user-install solargraph`
-local servers = { 'pyright', 'solargraph', 'tsserver', 'rust_analyzer' }
+local servers = { 'pyright', 'solargraph', 'tsserver', 'rust_analyzer', 'gopls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     capabilities = capabilities,
   }
 end
-require'lspconfig'.gopls.setup{}
 
 local cmp = require 'cmp'
 cmp.setup {
