@@ -2,6 +2,7 @@ require "mappings"
 require "settings"
 require "plugin.treesitter"
 require "plugin.lsp"
+require("plugin.tokyonight")
 
 local function clone_paq()
   local path = vim.fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
@@ -40,7 +41,7 @@ require 'paq' {
   "christoomey/vim-tmux-navigator";
 
   "lukas-reineke/indent-blankline.nvim";
-  "jiangmiao/auto-pairs";
+  -- "jiangmiao/auto-pairs";
   "vim-airline/vim-airline";
   "vim-airline/vim-airline-themes";
 
@@ -51,6 +52,5 @@ require 'paq' {
   "Mofiqul/vscode.nvim";
   "folke/tokyonight.nvim";
 }
-vim.g.vscode_style = "dark"
-vim.g.vscode_italic_comment = 1
+
 vim.cmd[[colorscheme tokyonight]]

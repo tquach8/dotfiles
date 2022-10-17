@@ -8,9 +8,6 @@ o.hidden = true
 o.shiftwidth = 2
 o.termguicolors = true
 o.swapfile = false
-wo.colorcolumn = "100"
+wo.colorcolumn = "120"
 
 vim.cmd[[set mouse=a]]
-
-local ts = require 'nvim-treesitter.configs'
-ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}
