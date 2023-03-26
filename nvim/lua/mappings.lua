@@ -1,6 +1,6 @@
 local map = vim.api.nvim_set_keymap
 
-vim.g.mapleader = ','
+vim.g.mapleader = ' '
 
 local options = { noremap = true }
 map('i', 'jj', '<Esc>', options)
@@ -17,6 +17,7 @@ map('n', '<leader>vd', ':resize +5<CR>', options)
 map('n', '<leader><Esc>', ':nohlsearch<CR>', options)
 map('n', '<leader>br', ':bufdo e<CR>', options)
 map('v', '<C-c>', '"*y', options)
+map('n', '<leader>f', ':let @+=expand("%:p\")<CR>', options)
 
 map('n', '<C-p>', ':GFiles<CR>', options)
 map('n', '<C-f>', ':Rg<CR>', options)
