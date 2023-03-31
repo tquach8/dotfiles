@@ -49,4 +49,7 @@ return require('packer').startup(function(use)
     },
   }
 
+  use('preservim/vimux')
+  use('christoomey/vim-tmux-navigator')
+
 end)
