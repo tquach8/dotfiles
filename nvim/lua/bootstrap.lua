@@ -1,29 +1,29 @@
 local PKGS = {
-  "savq/paq-nvim";
+  "savq/paq-nvim",
 
-  "nvim-treesitter/nvim-treesitter";
-  "neovim/nvim-lspconfig";
-  "hrsh7th/nvim-cmp";
-  "hrsh7th/cmp-nvim-lsp";
+  "nvim-treesitter/nvim-treesitter",
+  "neovim/nvim-lspconfig",
+  "hrsh7th/nvim-cmp",
+  "hrsh7th/cmp-nvim-lsp",
 
-  "tiagovla/tokyodark.nvim";
+  "tiagovla/tokyodark.nvim",
 
-  "tpope/vim-surround";
-  "tpope/vim-commentary";
+  "tpope/vim-surround",
+  "tpope/vim-commentary",
 
-  "lukas-reineke/indent-blankline.nvim";
+  "lukas-reineke/indent-blankline.nvim",
 }
 
 local function clone_paq()
-  local path = vim.fn.stdpath('data') .. '/site/pack/paqs/start/paq-nvim'
+  local path = vim.fn.stdpath("data") .. "/site/pack/paqs/start/paq-nvim"
   if vim.fn.empty(vim.fn.glob(path)) > 0 then
-    vim.fn.system {
-      'git',
-      'clone',
-      '--depth=1',
-      'https://github.com/savq/paq-nvim.git',
-      path
-    }
+    vim.fn.system({
+      "git",
+      "clone",
+      "--depth=1",
+      "https://github.com/savq/paq-nvim.git",
+      path,
+    })
   end
 end
 
@@ -31,11 +31,11 @@ local function bootstrap_paq()
   clone_paq()
 
   -- Load Paq
-  vim.cmd('packadd paq-nvim')
-  local paq = require('paq')
+  vim.cmd("packadd paq-nvim")
+  local paq = require("paq")
 
   -- Exit nvim after installing plugins
-  vim.cmd('autocmd User PaqDoneInstall quit')
+  vim.cmd("autocmd User PaqDoneInstall quit")
 
   -- Read and install packages
   paq(PKGS)
