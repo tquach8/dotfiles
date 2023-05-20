@@ -34,6 +34,7 @@ vim.keymap.set("n", "<leader>rl", function()
     filter = function(client)
       return client.name == "null-ls"
     end,
+    timeout_ms = 3000,
   })
 end)
 
