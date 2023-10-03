@@ -4,6 +4,7 @@ lsp.preset("recommended")
 lsp.ensure_installed({
   "tsserver",
   "eslint",
+  "gopls"
 })
 
 lsp.on_attach(function(client, bufnr)

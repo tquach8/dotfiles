@@ -48,6 +48,8 @@ vim.keymap.set("n", "<C-r>", "", {
       vim.cmd(':VimuxRunCommand("clear; bundle exec rspec " . bufname("%"))')
     elseif file_type == ".js" or file_type == ".jsx" then
       vim.cmd(':VimuxRunCommand("clear; yarn test " . bufname("%"))')
+    elseif file_type == ".go" then
+      vim.cmd(':VimuxRunCommand("clear; go test " . bufname("%"))')
     else
       print("Test runner not found for the file type", file_type)
     end
