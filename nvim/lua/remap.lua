@@ -28,6 +28,9 @@ vim.keymap.set("n", "<leader>vd", ":resize +5<CR>")
 vim.keymap.set("n", "<leader>br", ":bufdo e<CR>")
 vim.keymap.set("n", "<leader>f", ':let @+=expand("%:p")<CR>')
 
+-- Show diagnostic
+vim.keymap.set("n", "<space>e", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
+
 -- Run the default formatter set in null-ls.lua
 vim.keymap.set("n", "<leader>rl", function()
   vim.lsp.buf.format({
