@@ -31,16 +31,6 @@ vim.keymap.set("n", "<leader>f", ':let @+=expand("%:p")<CR>')
 -- Show diagnostic
 vim.keymap.set("n", "<space>e", ":lua vim.diagnostic.open_float(0, {scope='line'})<CR>")
 
--- Run the default formatter set in null-ls.lua
-vim.keymap.set("n", "<leader>rl", function()
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name == "null-ls"
-    end,
-    timeout_ms = 3000,
-  })
-end)
-
 -- Calls test runner on current file in new tmux pane
 vim.keymap.set("n", "<C-r>", "", {
   callback = function()
