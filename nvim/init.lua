@@ -1,7 +1,4 @@
-require("remap")
-require("set")
+require("config.keymaps")
+require("config.options")
 
-require("plugin.packer")
-
--- Enable LSP
-vim.lsp.enable("luals")
+require("core.lazy")

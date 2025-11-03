@@ -49,5 +49,4 @@ vim.keymap.set("n", "<C-r>", "", {
   end,
 })
 
-vim.keymap.set("n", "<C-t>", ":NERDTreeToggle<CR>")
 vim.keymap.set("n", "<C-e>", ':VimuxRunCommand("clear; bundle exec rspec " . bufname("%") . ":" . line("."))<CR>')
