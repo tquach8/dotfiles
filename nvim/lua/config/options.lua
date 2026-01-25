@@ -26,3 +26,6 @@ vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "120"
 
 vim.opt.updatetime = 50
+
+-- Completion options: don't auto-select first item
+vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
