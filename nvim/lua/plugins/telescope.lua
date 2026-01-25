@@ -11,6 +11,9 @@ return {
   opts = {
     defaults = {
       path_display = { "truncate" },
+      preview = {
+        treesitter = false, -- Disable treesitter syntax highlighting in preview
+      },
     }
   },
 }
